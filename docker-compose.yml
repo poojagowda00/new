@@ -1,0 +1,21 @@
+version: '3.0'
+services:
+  cont_my:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+    volumes:
+      - /home/ec2-user/dir1:/cont1
+
+  cont_re:
+    image: redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - /home/ec2-user/dir2:/cont2
+
+  cont_busy:
+    image: busybox
+    volumes:
+      - /home/ec2-user/dir3:/cont3
+        
