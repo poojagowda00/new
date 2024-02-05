@@ -1,4 +1,4 @@
-FROM ubuntu
-RUN apt install git -y
-RUN apt install openjdk-17-jdk -y
-RUN apt install maven -y
+FROM amazonlinux
+RUN yum install git -y
+RUN yum install java-17 -y
+RUN yum install maven -y
